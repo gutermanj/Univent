@@ -1,0 +1,56 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12 text-center header-content">
+<h1>Upcoming Events</h1>
+	<hr class="hr">
+		</div>
+	</div>
+
+
+	<div class="row content-wrapper" style="padding-top: 0px;">
+		<div class="col-sm-8 panel-default box-shadow--6dp" style="background-color: #F7F7F7; border-style: solid; border-radius: 5px; border-color: lightgray; border-width: 1px;">
+			<h3>Today's Events</h3>
+			<hr class="cool-underline" style="border-color: black;">
+			<% @concerts_today.each do |x| %>
+			<span class="index-title"><%= link_to x.artist, concert_path(x), :style => 'text-decoration: none; color: black;', :class => 'sliding-u-l-r' %></span>
+			
+			<% if session[:user_id] == x.user_id %>
+			<%= link_to 'x', concert_path(x), method: :delete, :class => 'close' %>
+			<% end %>
+
+			<br>
+				<span>@<b><%= x.city %></b></span>
+				<br>
+				<small class="date-info"><%= x.date.month %>/<%= x.date.day %>/<%= x.date.year %></small><span class="today"> TODAY!</span>
+				<br>
+				
+				<br><br>
+				<hr style="border-color: darkgray;">
+			<% end %>
+			<small class="more-info">Click an artist for more information</small>
+			<br><br><br>
+		</div>
+
+
+		<div class="col-sm-4">
+			<h3>Events This Month</h3>
+			<hr class="cool-underline">
+			<% @concerts_this_month.each do |x| %>
+			<span class="index-title"><%= link_to x.artist, concert_path(x), :style => 'text-decoration: none; color: black;', :class => 'sliding-u-l-r-month' %></span>
+			
+			<% if session[:user_id] == x.user_id %>
+			<%= link_to 'x', concert_path(x), method: :delete, :class => 'close' %>
+			<% end %>
+
+			<br>
+				<span>@<b><%= x.city %></b></span>
+				<br>
+				<small class="date-info"><%= x.date.month %>/<%= x.date.day %>/<%= x.date.year %></small>
+				<br>
+				<br><br>
+				<hr style="border-color: black;">
+			<% end %>
+		</div>
+	</div>
+</div> 
+

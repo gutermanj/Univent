@@ -1,0 +1,21 @@
+<html>
+<head>
+
+</head>
+<body>
+	<div class="container profile-container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h1>Concert App Profile</h1>
+			</div> <!-- first col-md-12 text-center -->
+<% if session[:user_id] == @user.id %>
+<p>Hey <%= session[:username] %>, this is your profile! :) </p>
+
+<% else %>
+<%= @user.username %><span>'s Profile</span>
+<% end %>
+
+		</div> <!-- first row -->
+	</div> <!-- first container -->
+</body>
+</html>

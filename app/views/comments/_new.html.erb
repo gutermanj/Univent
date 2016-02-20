@@ -1,0 +1,15 @@
+<%= form_for [@user, @concert, @comment] do |f| %>
+	
+
+	<br><br>
+	<%= f.label 'Comment' %><br>
+	<%= f.text_area 'comment', :class => 'comment-field', :required => true %>
+	<br>
+	<% if session[:user_id] == nil %>
+	<%= f.submit 'Add Comment', :class => 'btn btn-info', :disabled => true %>
+	<span><small>*You much sign in to comment!</small></span>
+	<% else %>
+		<%= f.submit 'Add Comment', :class => 'btn btn-info' %>
+		<% end %>
+	<hr class="hr">
+	<% end %>

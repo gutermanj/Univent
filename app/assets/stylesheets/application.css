@@ -1,0 +1,166 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body { padding-top: 50px; }
+
+
+.hr { border-color: lightblue; border-width: 3px; width: 100%; }
+
+.content-wrapper {
+	padding: 7%;
+	
+	color: #3b3a46;
+}
+
+.form-field {
+	width: 300px;
+	height: 30px;
+	color: #3b3a46;
+	font-weight: bold;
+	padding: 7px;
+}
+
+.new-concert {
+	padding-top: 50px;
+}
+
+.concert-form {
+	background-color: #3b3a46;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #c0dfd9;
+	color: #e9ece5;
+
+}
+
+.where {
+	color: lightblue;
+}
+
+.play-circle {
+	font-size: 40px;
+	padding-right: 30px;
+}
+
+.index-title {
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.index-title:hover {
+	text-decoration: none;
+}
+
+.more-info {
+	font-size: 14px;
+}
+
+.date-info {
+	font-size: 16px;
+	color: gray;
+}
+
+.sliding-u-l-r {
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 2px solid transparent;    
+    width: 0px;
+    transition: 0.3s ease;
+    white-space: nowrap;
+    height: 25px;
+}
+.sliding-u-l-r:hover {
+    border-bottom: 2px solid lightblue;
+    width: 20%;
+    cursor: default;
+}
+
+.sliding-u-l-r-month {
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 2px solid transparent;    
+    width: 0px;
+    transition: 0.3s ease;
+    white-space: nowrap;
+    height: 25px;
+}
+.sliding-u-l-r-month:hover {
+    border-bottom: 2px solid lightblue;
+    width: 40%;
+    cursor: default;
+}
+
+.today {
+	color: red;
+}
+
+.cool-underline { 
+	border-color: darkgray; 
+	border-width: 1px; 
+	width: 100%; 
+}
+
+.navbruh {
+	color: lightblue;
+}
+
+.comment-field {
+	width: 400px;
+	height: 150px;
+}
+
+.name-field {
+	width: 200px;
+}
+
+.comment-content {
+	padding-left: 20px;
+}
+
+.show-splits {
+	border-color: lightgray;
+}
+
+
+
+.box-shadow--2dp {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+}
+.box-shadow--3dp {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12)
+}
+.box-shadow--4dp {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2)
+}
+.box-shadow--6dp {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
+}
+.box-shadow--8dp {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2)
+}
+.box-shadow--16dp {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
+}
+
+.profile-container {
+	padding: 50px;
+}
+
+.modal {
+	display: block;
+}
+
+

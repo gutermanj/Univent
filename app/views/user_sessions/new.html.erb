@@ -1,0 +1,44 @@
+
+<div class="loginform text-center">
+<h1>Please Log In</h1>
+<%= form_tag user_sessions_path do %>
+
+
+
+ <div class="row">
+            <div class="col-md-12">
+               
+                    
+                    <div class="field">
+    <%= label_tag :email, "Email Address" %><br>
+    </div>
+    
+    <div class="field1">
+    <%= text_field_tag :email, params[:email], class: "fields" %>
+    </div>
+    <br />
+    
+    <div class="field">
+    <%= label_tag :password, "Password" %><br>
+    </div>
+    
+    <div class="field1">
+    <%= password_field_tag :password, nil, :class => "fields" %>
+    </div>
+    
+    <br />
+    
+    <%= submit_tag "Log In", class: "btn btn-info" %>
+    <br><br>
+    <% if flash[:notice] %>
+         <div class="popup">
+             <div class="col-sm-10">
+    <div id="notice"><%= flash[:notice] %></div>
+    
+        </div>
+            </div>
+                </div>
+                    </div>
+                        </div>
+        <% end %>
+    <% end %>

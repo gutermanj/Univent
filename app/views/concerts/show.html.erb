@@ -1,0 +1,51 @@
+
+<div class="container" style="padding-top: 50px;">
+	<div class="row">
+		<div class="col-sm-6">
+			<h3><%= @concert.artist %></h3>
+			
+				<hr>
+			<h4 class="where">Where </h4>
+			<h5>@<%= @concert.venue %></h5>
+			<h5><%= @concert.city %></h5>
+			<br>
+			<hr class="show-splits">
+			<h4 class="where">When </h4>
+			<h5><%= @concert.date.month %>/<%= @concert.date.day %>/<%= @concert.date.year %></h5>
+			<br>
+			<hr class="show-splits">
+			<h4 class="where">Cost </h4>
+			<h5>$<%= @concert.price %></h5>
+			<%= link_to 'Buy Tickets!', concerts_path %>
+			<br>
+			<br><hr class="show-splits">
+			<h4 class="where">Description</h4>
+			<em><%= @concert.description %></em>
+			<br><br>
+			<span>Created by | <%= link_to @concert.user.username, user_path(@concert.user.id) %></span>
+			<hr style="border-color: black;">
+			<br><br>
+
+			<i class="glyphicon glyphicon-play-circle play-circle"></i>
+			<h4>Play a Demo of <%= @concert.artist %>'s Music</h4>
+			<br><br>
+
+		</div>
+
+		<div class="col-sm-6">
+			<%= render 'comments/new' %>
+
+			<% @comments.each do |x| %>
+				
+				<b><%= x.user.username %></b> <%= link_to 'x', concert_comment_path(@concert, x), method: :delete, :class => 'close' %>
+				<br>
+				<span class="comment-content"><%= x.comment %></span>
+				<hr class="show-splits">
+				
+				<br>
+				<% end %>
+				
+
+		</div>
+	</div>
+</div> <!-- .container -->
